@@ -16,7 +16,7 @@ All work done for the website will be committed to this repo. Anyone added here 
 ### Contribution
 Members who would like to contribute to the repo need to be directly added by the NCC Computer Club Website project lead. Please provide the lead with your GitHub username and a short explanation of how you want to contribute to the website so that you can be added to the repo. 
 
-In order to maintain an orderly project workflow, a few standards will be set in place for commiting and creating PRs. Take a look at the [contribution guidelines] (https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/contribution-guide.md)
+In order to maintain an orderly project workflow, a few standards will be set in place for commiting and creating PRs. Take a look at the [contribution guidelines](https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/contribution-guide.md)
 ### Tabs
 GitHub repositories provide various tabs that make collaboration easier for contributors. Please use them accordingly:
 
