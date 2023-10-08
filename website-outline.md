@@ -14,3 +14,7 @@ Show off the club's distinguished members and officers
 
 # Employer Page
 A page that shows employers that have a good record with NCC students.
+
+# Contact Page
+
+# About Page
