@@ -2,7 +2,7 @@
 Hello and welcome to the **Northampton Community College Website repository**! The NCC Computer Club Website repository is the perfect training ground for students of *computer science*, *web development/design*, *infosec*, *CIS*, *networking systems technology*, *application development*, and *system administration* who want to build something real for themselves and the community. 
 
 ## Our Mission
-We students of Northampton's computer and information technology sector learn many skills in our studies, but we sometimes struggle to find practical applications for said skills outside of the classroom. Our goal is to create a website that emphasises the accomplishments of our organization, connects students, promotes our members potential employers and other outside organizations, while providing a **legacy project** for all future members.
+We students of Northampton's computer and information technology sector learn many skills in our studies, but we sometimes struggle to find practical applications for said skills outside of the classroom. Our goal is to create a website that emphasises the accomplishments of our organization, connects students, and promotes our members to potential employers and other outside organizations, while providing an ongoing project for all future members.
 
 ### Year-to-Year Goal
 Members of the Computer Club should plan to keep this website updated each year with club news, potential projects, competition opportunities, etc. Most importantly, members need to ensure that the website stays compatible with SEO standards and browser updates, as well as maintaining the domain and servers that host the website.
