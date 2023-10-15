@@ -18,18 +18,17 @@ Through vision and collaboration, we members of the Northampton Community Colleg
 ## Want to see what we're working on?
 
 * Create a group of four image blocks with overlaid text: Competitions, Projects, PC Repair Clinic, Work Shops. Upon hovering over these images, the user will see a short paragraph with a description:
+  - Competitions–> Club members are encouraged to participate in competitions that test their skills. These include: SkillsUSA, National Cyber League, EC-Council, etc. 
+    * Links to the 'Competitions' section of the [Activities](https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md) page
 
-- Competitions–> Club members are encouraged to participate in competitions that test their skills. These include: SkillsUSA, National Cyber League, EC-Council, etc. 
-  * Links to the 'Competitions' section of the (Activities)[https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md] page
+  - Work Shops-> Student-hosted workshops for those who want to learn beyond the classroom. Engage in fun activities or develop a new skill to keep up with evolving industry standards.
+    * Links to the 'Work Shops' section of the [Activities](https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md) page
 
-- Work Shops-> Student-hosted workshops for those who want to learn beyond the classroom. Engage in fun activities or develop a new skill to keep up with evolving industry standards.
-  * Links to the 'Work Shops' section of the (Activities)[https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md] page
+  - Projects–> Want to help create something that will boost your resume? Prove your ambition by contributing to one the club's many community projects, or work with our members to improve your personal projects.
+    * Links to the 'Projects' section of the [Activities](https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md) page
 
-- Projects–> Want to help create something that will boost your resume? Prove your ambition by contributing to one the club's many community projects, or work with our members to improve your personal projects.
-  * Links to the 'Projects' section of the (Activities)[https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md] page
-
-- PC Repair-> The pride of the Computer Club, for the NCC community, the PC Repair Clinic is the place to go whenever your device needs a quick fix. For our members, it is an opportunity to volunteer and learn the inner workings of hardware.
-  * Links to the **PC Repair** web application/page*  
+  - PC Repair-> The pride of the Computer Club, for the NCC community, the PC Repair Clinic is the place to go whenever your device needs a quick fix. For our members, it is an opportunity to volunteer and learn the inner workings of hardware.
+    * Links to the **PC Repair** web application/page
 
 ## Join Us 
 
