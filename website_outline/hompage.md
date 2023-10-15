@@ -18,6 +18,7 @@ Through vision and collaboration, we members of the Northampton Community Colleg
 ## Want to see what we're working on?
 
 * Create a group of four image blocks with overlaid text: Competitions, Projects, PC Repair Clinic, Work Shops. Upon hovering over these images, the user will see a short paragraph with a description:
+  
   - Competitions–> Club members are encouraged to participate in competitions that test their skills. These include: SkillsUSA, National Cyber League, EC-Council, etc. 
     * Links to the 'Competitions' section of the [Activities](https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md) page
 
