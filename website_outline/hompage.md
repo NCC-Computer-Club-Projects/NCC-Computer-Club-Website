@@ -20,18 +20,21 @@ Through vision and collaboration, we members of the Northampton Community Colleg
 * Create a group of four image blocks with overlaid text: Competitions, Projects, PC Repair Clinic, Work Shops. Upon hovering over these images, the user will see a short paragraph with a description:
 
 - Competitions–> Club members are encouraged to participate in competitions that test their skills. These include: SkillsUSA, National Cyber League, EC-Council, etc. 
-  *Links to the 'Competitions' section of the **Activities** page* 
+  * Links to the 'Competitions' section of the (Activities)[https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md] page
 
 - Work Shops-> Student-hosted workshops for those who want to learn beyond the classroom. Engage in fun activities or develop a new skill to keep up with evolving industry standards.
-  *Links to the 'Work Shops' section of the **Activities** page*  
+  * Links to the 'Work Shops' section of the (Activities)[https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md] page
+
+- Projects–> Want to help create something that will boost your resume? Prove your ambition by contributing to one the club's many community projects, or work with our members to improve your personal projects.
+  * Links to the 'Projects' section of the (Activities)[https://github.com/NCC-Computer-Club-Projects/NCC_Computer_Club_Website/blob/main/website_outline/activities.md] page
 
 - PC Repair-> The pride of the Computer Club, for the NCC community, the PC Repair Clinic is the place to go whenever your device needs a quick fix. For our members, it is an opportunity to volunteer and learn the inner workings of hardware.
-  *Links to the **PC Repair** web application/page*  
+  * Links to the **PC Repair** web application/page*  
 
-- Projects–> Want to help create something that will boost your resume? Prove your ambition by contributing to one the club's many community projects, or work with our memebers to improve your personal projects.
-  *Links to the 'Projects' section of the **Activities** page*  
+## Join Us 
 
-## Join Us <!-- This will be a longer section detailing how to join the club. -->
+<!-- This will be a longer section detailing how to join the club. -->
+
 Contact our club advisor, Professor Brian Stokes for details on how to join Computer Club. If you do not want to be a fulltime member, there are other ways to contribute.
 
 ### Join Our Discord!
@@ -42,15 +45,18 @@ Our club Discord for anyone interested in the Computer Club's activities. Join u
 ### Fill Out the Project Suggestion Forum
 * Have a short section for visitors to fill out suggestions for future projects. The fields should be as follows:
 
-- How did you hear about us?: Provide a datalist of options. Include an other option. When selected, displays a text input field.
-- Community: Provide the following datalist: student, ncc staff, ncc faculty, surrounding bethelehem community, surrounding monroe community
-- Suggestion Type: Provide a datalist of general things our members can do: app, webpage, pc repair, everyday technology, (add more)
+- How did you hear about us?: Provide a data list of options. Include an "other" option. When selected, displays a text input field.
+- Community: Provide the following data list: student, NCC staff, NCC faculty, surrounding Bethlehem community, surrounding Monroe community
+- Suggestion Type: Provide a data list of general things our members can do: app, webpage, pc repair, everyday technology, (add more)
 - My Suggestion: Have the user propose their project suggestion to the club.
-- Would you like regular updates on the project status?: If yes, have visitor provide an email address.
+- Would you like regular updates on the project status?: If yes, have the visitor provide an email address.
 
 ### Events
-* Create a section for upcomming club events. 
-* Maybe implement a slideshow for this section to display the details of upcomming events. 
+* Create a section for upcoming club events. 
+* Maybe implement a slideshow for this section to display the details of upcoming events. 
 
-## Other Tasks <!-- Non-element tasks -->
+## Other Tasks 
+
+<!-- Non-element tasks -->
+
 * Decide on a color palette for the website
