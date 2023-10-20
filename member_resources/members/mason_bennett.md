@@ -1,7 +1,7 @@
 # Name
 Mason Bennett
 
-# GitHub ID
+## GitHub ID
 MB1721
 
 ## Major 
