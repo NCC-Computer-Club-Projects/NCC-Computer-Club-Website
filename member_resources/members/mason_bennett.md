@@ -1,6 +1,9 @@
 # Name
 Mason Bennett
 
+# GitHub ID
+MB1721
+
 ## Major 
 Computer Science
 
