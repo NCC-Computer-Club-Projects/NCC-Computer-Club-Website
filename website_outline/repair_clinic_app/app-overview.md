@@ -1,4 +1,4 @@
-# PC Rpair Clinic App Outline
+# PC Repair Clinic App Outline
 Outline the features of the PC Repair App
 
 ## Overview
