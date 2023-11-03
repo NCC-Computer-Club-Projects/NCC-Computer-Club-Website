@@ -2,7 +2,7 @@
 # Check line 34 to line 43 for http.conf
 # Check line 58 to line 64 for ssl.conf
 if [ $EUID ! = "0" ] 
-    then echo "Run Script with sudo. Do: sudo ./redhat_setup"
+    then echo "Run Script with sudo. Do: sudo ./redhat-setup"
     exit
 fi
 
