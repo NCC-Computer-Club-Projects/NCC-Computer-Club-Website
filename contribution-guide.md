@@ -78,3 +78,6 @@ These standards are to be maintained by contributors when attempting to make cha
 
 ### Writing Commit Messages 
 From adding punctuation to injecting new code– every change made to a file in the repo must be committed with a message that adequately describes the change.
+
+### Naming Files and Directories
+Use snake case ( - ) when creating files, and camel case ( _ ) for naming directories.
