@@ -7,16 +7,16 @@ The customer will be greeted to a PC Repair Clinic logo and a fixed background a
 ## Services
 Provide sample images or icons to indicate the clinic's specializations. Provide at least the following services:
 
-### Request a repair
+### *Request a repair*
 Send a fully detailed description of your repair request. This will be the main request option.
 
-### Quick advising
+### *Quick advising*
 Send a descrition of your device and issue. A repair volunteer will get back to you with a repair recommendation. This is the alternative to coming into the repair clinic.
 
-### Schedule a Consultation Appointment
+### *Schedule a Consultation Appointment*
 Schedule a consultation
 
-### Repair Quick Tips
+### *Repair Quick Tips*
 For customers who do not want the hassle of coming into the clinic or waiting for a repair. Provide general tips to common issues.
 
 ## Our Hours
