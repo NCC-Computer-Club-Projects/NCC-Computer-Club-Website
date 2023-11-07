@@ -16,6 +16,7 @@ body {
 }
 
 img, svg, video {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+  font-style: italic;
 }
