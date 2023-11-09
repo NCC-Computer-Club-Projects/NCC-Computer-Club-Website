@@ -24,6 +24,6 @@ At the bottom of the page list the hours that the PC Repair Clinic is open.
 
 ## Status
 Shows how far along the user's repair request is.
-* request recieved
-* working on request
-* repair finished
+- Stage 1: Request recieved.
+- Stage 2: Working on the request.
+- Stage 3: Finished repair. Ready for Pickup.
