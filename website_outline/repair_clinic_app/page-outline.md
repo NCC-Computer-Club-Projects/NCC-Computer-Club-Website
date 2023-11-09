@@ -21,3 +21,9 @@ For customers who do not want the hassle of coming into the clinic or waiting fo
 
 ## Our Hours
 At the bottom of the page list the hours that the PC Repair Clinic is open.
+
+## Status
+Shows how far along the user's repair request is.
+* request recieved
+* working on request
+* repair finished
