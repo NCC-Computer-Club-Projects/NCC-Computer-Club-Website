@@ -1,0 +1,47 @@
+#nav-bar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+#pages {
+  display: inline-flex;
+  width: auto;
+  height: 5rem;
+  margin-right: 2rem;
+  justify-content: inherit;
+  align-items: center;
+  list-style: none;
+}
+
+.pageLink {
+  height: 60%;
+  border: solid 1px hsl(200, 50%, 80%);
+  border-radius: 5px;
+  margin-left: 2rem;
+  padding: 0.25rem 0.5rem;
+  background-color: hsl(120, 50%, 50%);
+  box-shadow: inset 0px 0px 8px 1px hsl(120, 20%, 15%);
+}
+
+.pageLink:hover {
+  box-shadow: inset 0px 0px 8px 3px hsl(120, 20%, 15%);
+}
+
+.pageLink:active {
+  border: 1px solid orange;
+}
+
+.pageLink.home {
+  order: -1;
+}
+
+.pageLink a {
+  text-decoration: none;
+}
+
+.pageLink a,
+.pageLink a:visited {
+  color: hsl(120, 50%, 90%);
+}

@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env", // enable transforms for ES2015+
+      {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        },
+        "useBuiltIns": "usage", // inspect all code in the target environments and include only the required polyfills
+        "modules": "auto" // Enable transformation of ES module syntax to another module type
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript" // if used instead of ts-loader, babel does not perform type checking
+  ]
+}

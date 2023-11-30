@@ -1,0 +1,38 @@
+{
+  // Some typical compiler options
+  "compilerOptions": {
+    "target": "es2016", // convert to es2016, supported by most browsers as of 2023
+    "baseUrl": ".",
+    "paths": {
+      "@fonts/*": ["src/assets/fonts/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@scripts/*": ["src/assets/scripts/*"],
+      "@styles/*": ["src/assets/styles/*"],
+      "@components/*": ["src/components/*"],
+    },
+    "outDir": "./dist/",
+    "sourceMap": true, // output inline source maps to compiled JavaScript files
+    "noImplicitAny": false, // allow the 'any' type
+    "module": "esnext",
+    "moduleResolution": "bundler", // support new Node.js module resolution features as they’re added.
+    "jsx": "react",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  // NEW: Options for file/directory watching
+  "watchOptions": {
+    // Use native file system events for files and directories
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    // Poll files for updates more frequently
+    // when they're updated a lot.
+    "fallbackPolling": "dynamicPriority",
+    // Don't coalesce watch notification
+    "synchronousWatchDirectory": true,
+    // Finally, two additional settings for reducing the amount of possible
+    // files to track  work from these directories
+    "excludeDirectories": ["**/node_modules", "_build"],
+    "excludeFiles": ["build/fileWhichChangesOften.ts"]
+  }
+}

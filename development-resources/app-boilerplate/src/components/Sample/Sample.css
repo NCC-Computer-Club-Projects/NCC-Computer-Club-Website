@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('@fonts/Inter/static/Inter-Regular.ttf');
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Inter';
+  background-image: url('@images/sample/flower-field-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: contain;
+}
+
+.test-style {
+  border: dashed hsl(45, 50%, 50%) 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

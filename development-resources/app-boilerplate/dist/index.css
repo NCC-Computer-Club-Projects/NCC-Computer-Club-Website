@@ -1,0 +1,40 @@
+/*!******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/global-styles.css ***!
+  \******************************************************************************************************************************/
+/*
+Style Rule Order:
+1. position
+2. display
+3. box-sizing
+4. width and height
+5. max-width/height
+6. additional display properties
+7. box module styles outside in
+8. text styles
+9. transformations
+10. animation
+11. other
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  color-scheme: light dark;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: system-ui;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  font-style: italic;
+}
