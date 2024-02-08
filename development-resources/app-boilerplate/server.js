@@ -18,23 +18,13 @@ if (process.argv[2] === 'development') { // use webpack development middleware
     })
   );
 } else if (process.argv[2] === 'production') {
-  // configure repair app routes
-  const repairAppDir = path.resolve(__dirname, 'views/pc-repair-app/');
-  const repairAppStatic = path.join(repairAppDir, 'dist/');
 
-  app.use(express.static(repairAppStatic));
+  // require routers
+  const { pcRepairRouter } = require('./routes/index.js');
 
-  // configure main website routes
-  app.get('/', (req, res, next) => {
-    res.json({message: 'Hello World'});
-  });
-
-
-  app.get('/pc-repair-clinic', (req, res, next) => {
-    res.sendFile('index.html', {
-      root: repairAppStatic
-    });
-  });
+  // set up pcRepairRouter 
+  app.use(express.static(pcRepairRouter.static));
+  app.use('/pc-repair-clinic', pcRepairRouter.router);
 }
 
 // configure host variables
