@@ -31,6 +31,7 @@
     "react-router-dom": "^6.19.0",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
+    "sharp": "^0.33.2",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",

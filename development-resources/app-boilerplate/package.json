@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "(cd views/pc-repair-app && npm run dev) && nodemon server.js development",
-    "prod": "(cd views/pc-repair-app && npm run prod) && nodemon server.js production"
+    "prod": "(cd views/pc-repair-app && npm run prod) && node server.js production"
   },
   "keywords": [],
   "author": "",

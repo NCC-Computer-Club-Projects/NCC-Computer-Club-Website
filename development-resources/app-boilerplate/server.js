@@ -30,4 +30,4 @@ if (process.argv[2] === 'development') { // use webpack development middleware
 // configure host variables
 const { PORT: port = 5670, HOST: host = 'localhost' } = process.env;
 
-app.listen(port, () => console.log(`App listening on http://${host}:${port}\n`));
+app.listen(port, host, () => console.log(`App listening on http://${host}:${port}\n`));
