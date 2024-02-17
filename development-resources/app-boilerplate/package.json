@@ -8,7 +8,7 @@
     "rm-dependencies": "rm -r views/*/node_modules views/*/package-lock.json node_modules package-lock.json",
     "build": "npm run rm-dependencies ; (cd views/pc-repair-app && npm i) && npm i",
     "dev": "(cd views/pc-repair-app && npm run dev) && nodemon server.js development",
-    "prod": "(cd views/pc-repair-app && npm run prod) && node server.js production"
+    "start": "(cd views/pc-repair-app && npm run prod) && node server.js production"
   },
   "keywords": [],
   "author": "",
