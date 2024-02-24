@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rm-dependencies": "rm -r views/*/node_modules views/*/package-lock.json node_modules package-lock.json",
-    "build": "npm run rm-dependencies ; (cd views/pc-repair-app && npm i) && npm i",
-    "dev": "(cd views/pc-repair-app && npm run dev) && nodemon server.js development",
-    "start": "(cd views/pc-repair-app && npm run prod) && node server.js production"
+    "rm-dependencies": "node assets/scripts/package/rm-dependencies.js",
+    "build": "node assets/scripts/package/build.js",
+    "compile": "node assets/scripts/package/compile.js",
+    "dev": "npm run compile -- dev && nodemon server.js development",
+    "start": "npm run compile -- prod && node server.js production"
   },
   "keywords": [],
   "author": "",

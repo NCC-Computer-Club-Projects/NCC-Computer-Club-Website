@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // creates an html fil
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // extracts css from each js file and creates a new css reference file
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
-const imgRegex = /.(jpg|jpeg|png|svg|gif)$/i;
+const imgRegex = /\.(jpg|jpeg|png|svg|gif)$/i;
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/i;
 
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ // should be first, as it is depended on by other integrated plugins
-      title: 'App Boilerplate',
+      title: 'PC Repair Clinic',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/assets/html-templates/index.html'), 
       inject: true, // inject all assets into template; Position (head or body) depends on scriptLoading
@@ -21,7 +22,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '../../public/images/logos/mb-logo.svg'), // source image to generate icon from
+      logo: path.resolve(__dirname, '../../assets/images/logo/mb-logo.svg'), // source image to generate icon from
       inject: true, // inject links/metadata into HtmlWebpackPlugin(s)
       // outputPath: 'assets', // directory to output the assets relative to the webpack output dir.
       prefix: 'assets/images/favicons/', // prefix path for generated assets
@@ -49,9 +50,19 @@ module.exports = {
       {
         test: /\.s?[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          path.resolve(__dirname, 'node_modules/css-loader'),
-          path.resolve(__dirname, 'node_modules/sass-loader')],
+          MiniCssExtractPlugin.loader, // extracts styles into css files
+          path.resolve(__dirname, 'node_modules/css-loader'), // resolves `@import` and `url()`
+          {
+            // process css with PostCSS
+            loader: path.resolve(__dirname, 'node_modules/postcss-loader'),
+            options: {
+              postcssOptions: {
+                plugins: [ autoprefixer ]
+              }
+            }
+          },
+          path.resolve(__dirname, 'node_modules/sass-loader') // compiles sass/scss to css
+        ],
       },
       {
         test: imgRegex,

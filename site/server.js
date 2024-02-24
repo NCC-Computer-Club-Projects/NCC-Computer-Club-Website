@@ -7,8 +7,9 @@ const dotenv = require('dotenv');
 // set up application-level middleware
 const app = express();
 
+// configure deveopment or production environment
 if (process.argv[2] === 'development') { // use webpack development middleware
-  const webpackConfig = require('./views/pc-repair-app/webpack.dev.js');
+  const webpackConfig = require('./views/pc-repair-clinic/webpack.dev.js');
   const compiler = webpack(webpackConfig);
   const publicPath = webpackConfig.output.publicPath;
   app.use(
@@ -19,13 +20,13 @@ if (process.argv[2] === 'development') { // use webpack development middleware
 } else if (process.argv[2] === 'production') dotenv.config();
 
 // require routers
-const { pcRepairRouter } = require('./routes/index.js');
+const { siteRouter } = require('./routes/index.js');
 
-// set up pcRepairRouter
-app.use(express.static(pcRepairRouter.static));
-app.use('/pc-repair-clinic', pcRepairRouter.router);
+// set up siteRouter 
+app.use(express.static(siteRouter.static));
+app.use('/pc-repair-clinic', siteRouter.router);
 
 // configure host variables
-let { PORT: port = 5670, HOST: host = 'localhost' } = process.env;
+const { PORT: port = 5670, HOST: host = 'localhost', PROTOCOL: protocol = 'http' } = process.env;
 
-app.listen(port, host, () => console.log(`App listening on http://${host}:${port}\n`));
+app.listen(port, host, () => console.log(`App listening on ${protocol}://${host}:${port}\n`));

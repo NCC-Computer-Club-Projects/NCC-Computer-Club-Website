@@ -1,6 +1,6 @@
-![MB Logo](./public/images/logos/mb-logo.svg)
+![MB Logo](./assets/images/logo/mb-logo.svg)
 
-# Mason Bennett Applications
+# MB Applications
 
 This is my personal setup for creating React web applications. The application includes support for React, Typescript, and SASS. It is bundled using Webpack.
 
