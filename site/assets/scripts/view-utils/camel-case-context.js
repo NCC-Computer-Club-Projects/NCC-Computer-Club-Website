@@ -1,15 +1,25 @@
-export default function camelCaseContext(path, extList = ['png','jpeg','jpg','svg','gif','tiff','raw'], pascalCase = false) { // camel case context keys
+/**
+ * Return the camel cased name of a webpack context module key
+ * @param {*} path 
+ * @param {*} extList 
+ * @param {*} pascalCase 
+ * @returns 
+ */
+
+export default function camelCaseContext(path, extList = ['png','jpeg','jpg','svg','gif','tiff','raw'], pascalCase = false) { 
   let extRegexStr = extList.reduce((str, ext) => str + ext + '|','\\.(');
   extRegexStr = extRegexStr.replace(/\|$/, '');
   extRegexStr += ')$';
   
   const imgRegex = new RegExp(extRegexStr, 'gi'); // capture image extention
-  const pathRegex = /.\//; // capture path
+  const pathRegex = /.*\//; // capture path
   const wordBreakRegex = /-\w/g; // capture word break
   
-  const pathIdx = path.search(pathRegex);
-  const extIdx = path.search(imgRegex);
-  let casedFileName = path.slice(pathIdx+2, extIdx) // retrieve file name without path and extension
+  // retrieve file name without path and extension
+  const pathMatch = path.match(pathRegex);
+  const extMatch = path.match(imgRegex);
+  let casedFileName = path.replace(pathMatch, '').replace(extMatch, ''); 
+
   if (pascalCase) casedFileName = casedFileName.replace(casedFileName[0], casedFileName[0].toUpperCase());
   const fileStr = casedFileName.replace(/-/g, ' ');
   
