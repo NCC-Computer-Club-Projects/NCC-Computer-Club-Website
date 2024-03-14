@@ -7,7 +7,7 @@ switch (platform) {
     exec("rm -r views/*/node_modules views/*/package-lock.json node_modules package-lock.json");
     break;
   case 'win32':
-    exec("del /S views\\*\\node_modules && del views\\*\\package-lock.json && del /S node_modules && del package-lock.json");
+    exec("del package-lock.json && rd /Q /S node_modules && FOR /D %d IN (views\\*) DO (del \"%d\\package-lock.json\" && rd /Q /S \"%d\\node_modules\")");
     break;
   default: 
     throw new Error('Unsupported platform');

@@ -1,22 +1,17 @@
 const { exec } = require('child_process');
+const util = require('util');
+const execProm = util.promisify(exec);
 const { platform } = require('process');
 const getViews = require('./get');
 
 async function buildViews() {
   const views = await getViews();
-  for (const view of views) {
-    switch (platform) {
-      case 'darwin':
-      case 'linux':
-        exec(`npm run rm-dependencies ; (cd "${view}" && npm i) && npm i`); 
-        break;
-      case 'win32':
-        exec(`npm run rm-dependencies & (cd "${view}" && npm i) && npm i`); 
-        break;
-      default: 
-        throw new Error('Unsupported platform');
-    }
-  }
+  
+  await execProm('npm run rm-dependencies');
+  
+  for (const view of views) await execProm(`cd "${view}" && npm i`);
+  
+  exec('npm i'); // install top-level dependencies
 }
 
 buildViews();

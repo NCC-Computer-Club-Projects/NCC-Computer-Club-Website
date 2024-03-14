@@ -7,7 +7,7 @@ switch (platform) {
     exec("rm -r dist/*");
     break;
   case 'win32':
-    exec("rmdir /S /Q dist\\*");
+    exec("del /Q /S dist\* & FOR /D %d in (dist\*) DO rd /Q /S %d");
     break;
   default: 
     throw new Error('Unsupported platform');
