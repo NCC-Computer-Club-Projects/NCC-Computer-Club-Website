@@ -23,7 +23,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={"/pc-repair-clinic/"} element={<Layout pages={pages}/>}>
+        <Route path={"/"} element={<Layout pages={pages}/>}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import './Layout.css';
 import KeyList from '../../../../../assets/scripts/view-utils/key-list';
-import brand from '../../../../../assets/images/logo/ncc-computer-club.png';
+import brand from '../../../../../assets/images/logo/mb-logo.svg';
 
 export default function Layout({ pages }) {
   const keyList = new KeyList();
@@ -21,7 +21,7 @@ export default function Layout({ pages }) {
     <>
       <nav className="navbar navbar-expand-md bg-primary">
         <div id="pages" className="container-fluid">
-          <Link className="navbar-brand" to="/pc-repair-clinic" >
+          <Link className="navbar-brand" to="/" >
             <img src={brand} height={50}/>
           </Link>
           <button 

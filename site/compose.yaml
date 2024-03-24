@@ -1,0 +1,13 @@
+services:
+  server:
+    build:
+      context: .
+      target: dev # target stage of the environment
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
+    expose:
+      - ${PORT}
+    volumes:
+      - .:/usr/src/app

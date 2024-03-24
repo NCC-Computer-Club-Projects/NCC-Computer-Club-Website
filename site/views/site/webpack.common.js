@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ // should be first, as it is depended on by other integrated plugins
-      title: 'PC Repair Clinic',
+      title: 'App Boilerplate',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/assets/html-templates/index.html'), 
       inject: true, // inject all assets into template; Position (head or body) depends on scriptLoading
@@ -22,7 +22,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '../../assets/images/logo/ncc-computer-club.png'), // source image to generate icon from
+      logo: path.resolve(__dirname, '../../assets/images/logo/mb-logo.svg'), // source image to generate icon from
       inject: true, // inject links/metadata into HtmlWebpackPlugin(s)
       // outputPath: 'assets', // directory to output the assets relative to the webpack output dir.
       prefix: 'assets/images/favicons/', // prefix path for generated assets
@@ -51,17 +51,17 @@ module.exports = {
         test: /\.s?[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader, // extracts styles into css files
-          path.resolve(__dirname, 'node_modules/css-loader'), // resolves `@import` and `url()`
+          'css-loader', // resolves `@import` and `url()`
           {
             // process css with PostCSS
-            loader: path.resolve(__dirname, 'node_modules/postcss-loader'),
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [ autoprefixer ]
               }
             }
           },
-          path.resolve(__dirname, 'node_modules/sass-loader') // compiles sass/scss to css
+          'sass-loader' // compiles sass/scss to css
         ],
       },
       {
@@ -74,17 +74,17 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: path.resolve(__dirname, 'node_modules/ts-loader'),
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
         use: {
-          loader: path.resolve(__dirname, 'node_modules/babel-loader'),
+          loader: 'babel-loader',
           options: {
             presets: [
-              [path.resolve(__dirname, 'node_modules/@babel/preset-env'), { targets: "defaults" }]
+              ['@babel/preset-env', { targets: "defaults" }]
             ],
             cacheDirectory: true,
           }

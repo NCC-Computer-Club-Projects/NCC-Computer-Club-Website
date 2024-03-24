@@ -1,10 +1,6 @@
 export default function developerMessage() {
   const instructions = [
     {
-      path: 'package.json',
-      steps: ['Edit "name", "description", and "author"']
-    },
-    {
       path: 'webpack.common.js',
       steps: [
         'Edit module.plugins.HtmlWebpackPlugin.title',
@@ -30,8 +26,8 @@ export default function developerMessage() {
       path: 'src/App.js',
       steps: [
         'Adjust imports on Ln 6 - 10 to reflect /src/pages/*',
-        'Adjust routes on Ln 25 - 29 to reflect /src/pages/*',
-        'Adjust view route on Ln 26 to match view name'
+        'Adjust view route on Ln 26 to match view name',
+        'Adjust routes on Ln 27 - 31 to reflect /src/pages/*'
       ]
     },
     {

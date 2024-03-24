@@ -28,8 +28,8 @@
 
 # OS generated files #
 ######################
-.DS_Store
-.DS_Store?
+**/.DS_Store
+**/.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
@@ -37,14 +37,14 @@ ehthumbs.db
 Thumbs.db
 
 # vs code
-.vscode
+**/.vscode
 
 # dependencies
-node_modules
+**/node_modules
 package-lock.json
 
 # local configurations
-.env
+**/.env
 
 # view distributions
 views/*/dist/

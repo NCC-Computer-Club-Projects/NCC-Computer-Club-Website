@@ -1,4 +1,4 @@
-const siteRouter = require('./pc-repair-clinic');
+const siteRouter = require('./site');
 
 module.exports = {
   siteRouter

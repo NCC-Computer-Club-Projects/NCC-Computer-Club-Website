@@ -1,7 +1,7 @@
 const path = require('path');
 const siteRouter = require('express').Router();
 
-const siteDist = path.resolve(__dirname, '../views/pc-repair-clinic/dist/');
+const siteDist = path.resolve(__dirname, '../views/site/dist/');
 
 siteRouter.get('/', (req, res) => {
   res.sendFile('index.html', { root: siteDist });
