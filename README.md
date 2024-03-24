@@ -1,3 +1,5 @@
+![NCCCC Logo](site/assets/images/logo/ncccc-logo.svg)
+
 # NCC Computer Club Website 
 Hello and welcome to the **Northampton Computer Club website repository**! The NCC Computer Club Website repository is the perfect training ground for students of *computer science*, *web development/design*, *infosec*, *CIS*, *networking systems technology*, *application development*, and *system administration* who want to build something real for themselves and the community. 
 

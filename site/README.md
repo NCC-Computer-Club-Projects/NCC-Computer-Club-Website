@@ -1,8 +1,9 @@
 ![NCCCC Logo](./assets/images/logo/ncccc-logo.svg)
 
-# MB Applications
+# Main Site
 
-This is my personal setup for creating React web applications. The application includes support for React, Typescript, and SASS. It is bundled using Webpack.
+This is the main website for NCCCC.
 
 ## Licensing
+
 This project is licensed under the terms of the [MIT license](./LICENSE.txt).

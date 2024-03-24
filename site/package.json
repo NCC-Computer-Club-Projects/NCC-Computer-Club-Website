@@ -1,7 +1,7 @@
 {
-  "name": "app-boilerplate",
+  "name": "ncccc-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "The main web application of Northampton Community College's Computer Club.",
   "main": "server.js",
   "scripts": {
     "clean": "node assets/scripts/package/clean-view.js",
@@ -14,7 +14,7 @@
     "start": "node server.js production"
   },
   "keywords": [],
-  "author": "Mason Bennett",
+  "author": "Northampton Community College Computer Club",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
