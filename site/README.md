@@ -1,8 +1,8 @@
-![NCCCC Logo](./assets/images/logo/ncccc-logo.svg)
+![n4c Logo](./assets/images/logo/n4c-logo.svg)
 
 # Main Site
 
-This is the main website for NCCCC.
+This is the main website for n4c.
 
 ## Licensing
 

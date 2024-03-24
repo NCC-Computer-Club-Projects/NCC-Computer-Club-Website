@@ -1,5 +1,5 @@
 {
-  "name": "ncccc-website",
+  "name": "n4c-website",
   "version": "1.0.0",
   "description": "The main web application of Northampton Community College's Computer Club.",
   "main": "server.js",

@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import './Layout.css';
 import KeyList from '../../../../../assets/scripts/view-utils/key-list';
-import brand from '../../../../../assets/images/logo/ncccc-logo.svg';
+import brand from '../../../../../assets/images/logo/n4c-logo.svg';
 
 export default function Layout({ pages }) {
   const keyList = new KeyList();

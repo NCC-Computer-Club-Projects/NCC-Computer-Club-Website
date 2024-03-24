@@ -22,7 +22,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '../../assets/images/logo/ncccc-logo.svg'), // source image to generate icon from
+      logo: path.resolve(__dirname, '../../assets/images/logo/n4c-logo.svg'), // source image to generate icon from
       inject: true, // inject links/metadata into HtmlWebpackPlugin(s)
       // outputPath: 'assets', // directory to output the assets relative to the webpack output dir.
       prefix: 'assets/images/favicons/', // prefix path for generated assets
