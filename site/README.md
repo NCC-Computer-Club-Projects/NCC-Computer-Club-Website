@@ -1,4 +1,4 @@
-![MB Logo](./assets/images/logo/mb-logo.svg)
+![NCCCC Logo](./assets/images/logo/ncc-computer-club.png)
 
 # MB Applications
 
