@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import Layout from './components/Layout/Layout';
 import camelCaseContext from '../../../assets/scripts/view-utils/camel-case-context';
 import KeyList from '../../../assets/scripts/view-utils/key-list';
@@ -12,7 +12,7 @@ export default function App() {
   const pagesDir = require.context('./pages', true, /\.(js|ts|tsx|jsx)$/); // capture page component files
   const routeKey = new KeyList();
 
-  useEffect(() => {
+  useEffect(() => {  
     console.log(pages);
     console.log(routes);
   }, []);
@@ -31,12 +31,10 @@ export default function App() {
       const Component = module.default.name;
 
       const newRoute = () => {
-        if (!ignorePages.test(lowerCasedName)) { // construct standard routes
+        if (!/error(404)?/.test(lowerCasedName)) { // construct standard routes
           pages.push(lowerCasedName); // push new page
           return <Route key={newKey} path={lowerCasedName} element={<Component/>}/>;
-        } else if (/(home|index)/.test(lowerCasedName)) { // construct index routes
-          return <Route key={newKey} index element={<Component/>}/>;
-        } else if (/error(404)?/.test(lowerCasedName)) { // construct error route
+        } else { // construct error route
           return <Route key={newKey} path="*" element={<Component/>}/>;
         }
       }
@@ -45,13 +43,15 @@ export default function App() {
     }
   })();
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout pages={pages} />}>
+        { routes }
+      </Route>
+    )
+  );
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={"/"} element={<Layout pages={pages}/>}>
-          { routes }
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   );
 }
