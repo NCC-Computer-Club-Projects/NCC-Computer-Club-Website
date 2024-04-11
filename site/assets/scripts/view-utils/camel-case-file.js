@@ -1,12 +1,12 @@
 /**
- * Return the camel cased name of a webpack context module key
+ * Return the camel cased name of a file
  * @param {*} path 
  * @param {*} extList 
  * @param {*} pascalCase 
  * @returns 
  */
 
-export default function camelCaseContext(path, extList = ['png','jpeg','jpg','svg','gif','tiff','raw'], pascalCase = false) { 
+export default function camelCaseFile(path, extList = ['png','jpeg','jpg','svg','gif','tiff','raw'], pascalCase = false) { 
   let extRegexStr = extList.reduce((str, ext) => str + ext + '|','\\.(');
   extRegexStr = extRegexStr.replace(/\|$/, '');
   extRegexStr += ')$';

@@ -4,10 +4,10 @@ import './Layout.css';
 import KeyList from '../../../../../assets/scripts/view-utils/key-list';
 import brand from '../../../../../assets/images/logo/n4c-logo.svg';
 
-export default function Layout({ pages }) {
+export default function Layout({ pageList }) {
   const keyList = new KeyList();
   
-  const linkComponents = pages.map(page => {
+  const linkComponents = pageList.map(page => {
     return (
       <li className="nav-item" key={keyList.generateKey(page)}>
         <Link to={page} className="nav-link">
