@@ -13,13 +13,12 @@ Style Rule Order:
 11. other
 */
 
-// Variable overrides first
-$primary: #900;
+// Custom.scss
+$primary: #959;
 $enable-shadows: true;
 $prefix: "mb-";
 $success: #7952b3;
 
-// Then import Bootstrap
 @import "bootstrap/scss/bootstrap";
 
 *, *::before, *::after {
