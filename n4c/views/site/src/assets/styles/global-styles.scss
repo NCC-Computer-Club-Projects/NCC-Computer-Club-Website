@@ -44,9 +44,18 @@ $active-link: #030DFF;
 $para: #030086;
 $bg: #EAEDFE;
 $footer-bg: #272A3F;
-$header-bg: linear-gradient(90deg, #67B4F0, #3B688A);
 
 @import "bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('@fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Yaldevi';
+  src: url('@fonts/Yaldevi/Yaldevi-VariableFont_wght.ttf');
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -62,7 +71,7 @@ html {
 body {
   min-height: 100vh;
   font-size: 1.6rem;
-  font-family: system-ui;
+  font-family: 'Yanone Kaffeesatz', system-ui;
 }
 
 img, svg, video {
