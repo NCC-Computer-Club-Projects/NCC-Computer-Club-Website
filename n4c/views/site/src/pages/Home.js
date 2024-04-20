@@ -3,7 +3,7 @@ import '@styles/pages/Home.scss';
 
 export default function Home() {
   return (
-    <div id="home">
+    <div id="Home">
       
     </div>
   );

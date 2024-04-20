@@ -3,7 +3,7 @@ import '@styles/pages/Events.scss';
 
 export default function Events() {
   return (
-    <div id="events">
+    <div id="Events">
       
     </div>
   );

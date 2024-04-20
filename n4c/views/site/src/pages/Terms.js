@@ -3,7 +3,7 @@ import '@styles/pages/Terms.scss';
 
 export default function Terms() {
   return (
-    <div id="terms">
+    <div id="Terms">
       
     </div>
   );

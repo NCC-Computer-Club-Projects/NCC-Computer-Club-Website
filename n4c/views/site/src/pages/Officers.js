@@ -3,7 +3,7 @@ import '@styles/pages/Officers.scss';
 
 export default function Officers() {
   return (
-    <div id="officers">
+    <div id="Officers">
       
     </div>
   );
