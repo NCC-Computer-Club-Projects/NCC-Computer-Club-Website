@@ -3,5 +3,5 @@
   "ext": "js,ts,jsx,tsx",
   "ignore": ["views/*/dist/", "node_modules/"],
   "exec": "npm run compile-dev && node server.js development",
-  "delay": 1000
+  "delay": 0
 }
