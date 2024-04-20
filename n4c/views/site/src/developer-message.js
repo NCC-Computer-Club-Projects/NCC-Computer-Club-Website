@@ -23,14 +23,6 @@ export default function developerMessage() {
       steps: ['Add/remove pages necessary for your application']
     },
     {
-      path: 'src/App.js',
-      steps: [
-        'Adjust imports on Ln 6 - 10 to reflect /src/pages/*',
-        'Adjust view route on Ln 26 to match view name',
-        'Adjust routes on Ln 27 - 31 to reflect /src/pages/*'
-      ]
-    },
-    {
       path: 'src/index.tsx',
       steps: ['Delete Ln 5 and Ln 6']
     },
