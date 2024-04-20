@@ -13,11 +13,38 @@ Style Rule Order:
 11. other
 */
 
-// Custom.scss
-$primary: #959;
-$enable-shadows: true;
+// Custom scss
 $prefix: "mb-";
-$success: #7952b3;
+$enable-shadows: true;
+
+// colors
+$logo-colors: (
+  "blue": #0454b3ff,
+  "baby-blue": #bfdbfeff,
+  "gray": #2f2f2fff,
+  "white": #ffffffff,
+  "dark-blue": #044392ff
+);
+
+$blues: (
+  "blue-100": map-get($logo-colors, "baby-blue"),
+  "blue-500": map-get($logo-colors, "blue"),
+  "blue-900": map-get($logo-colors, "dark-blue")
+);
+
+// theme colors
+$primary: map-get($blues, "blue-500");
+$secondary: map-get($blues, "blue-100");
+
+// component colors
+$heading: linear-gradient(90deg, #2689FF, #1A60B2);
+$text: map-get($logo-colors, "white");
+$footer: #CDCCFF;
+$active-link: #030DFF;
+$para: #030086;
+$bg: #EAEDFE;
+$footer-bg: #272A3F;
+$header-bg: linear-gradient(90deg, #67B4F0, #3B688A);
 
 @import "bootstrap/scss/bootstrap";
 
