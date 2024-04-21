@@ -1,0 +1,37 @@
+@use '@styles/global-styles.scss' as g;
+
+.banner {
+  top: 68%;
+  left: 3%;
+  width: 35%;
+  min-height: fit-content;
+  border-image-source: linear-gradient(90deg, hsl(245, 79%, 54%), hsl(245, 98%, 83%));
+  border-image-slice: 30;
+  border-image-repeat: stretch;
+  border-image-width: 1px;
+  padding: 3rem 3rem 1rem;
+  background-color: hsl(0, 2%, 10%, 0.3);
+  backdrop-filter: blur(4px);
+  color: map-get(g.$logo-colors, 'white');
+
+  h1 {
+    @include g.heading(h1);
+    margin-bottom: 3rem;
+  }
+
+  p {
+    @extend %large-text;
+  }
+
+  .action {
+    height: 20%;
+    align-items: baseline;
+    margin-top: 3rem;
+    gap: 5px;
+    padding-right: 5rem;
+
+    h3 {
+      @include g.heading(h3);
+    }
+  }
+}

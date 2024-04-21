@@ -1,0 +1,21 @@
+@use '@styles/global-styles.scss' as g;
+
+.hero {
+  height: 85rem;
+  background-image: linear-gradient(40deg, hsl(238, 98%, 60%), hsla(236, 40%, 85%, 0.2) 18%, hsla(238, 100%, 75%, 0.72)), url('@images/fun-at-primantis.jpg');
+  background-blend-mode: multiply;
+  background-position-x: center;
+  background-position-y: 40%;
+  background-size: cover;
+  isolation: isolate;
+  color: map-get($map: g.$logo-colors, $key: 'white');
+}
+
+.event-time {
+  top: 10%;
+  right: 5%;
+  border-right: solid 3px;
+  padding-right: 3rem;
+  @include g.heading(h1);
+  filter: drop-shadow(map-get(g.$logo-colors, 'blue') 0 0 1rem);
+}
