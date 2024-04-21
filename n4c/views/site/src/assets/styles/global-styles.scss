@@ -139,9 +139,9 @@ a:visited {
 }
 
 a:hover {
-  color: map-get($map: $logo-colors, $key: 'blue');
+  text-shadow: map-get($logo-colors, 'white') 0 0 1rem;
 }
 
 a:active {
-  color: $active-link;
+  color: map-get($map: $logo-colors, $key: 'blue');
 }
