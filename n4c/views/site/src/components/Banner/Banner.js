@@ -8,7 +8,7 @@ export default function Banner({header, main, action}) {
       <p>{main}</p>
       <div className='action d-flex justify-content-end'>
         <a href={action.link} target='_blank'>
-          <h3 className='fs-1'>{action.text} {action.arrow && '\u2192'}</h3>
+          <h3>{action.text} {action.arrow && '\u2192'}</h3>
         </a>
       </div>
     </div>

@@ -16,9 +16,11 @@ export default function Home() {
           }}
         />
         <div className='event-time position-absolute'>
-          April 4<br/>
-          Thursday<br/>
-          12pm - 4pm<br/>
+          <h1>
+            April 4<br/>
+            <span className='light'>Thursday<br/></span>
+            12pm - 4pm<br/>
+          </h1>
         </div>
       </div>
     </div>

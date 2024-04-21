@@ -14,8 +14,15 @@
 .event-time {
   top: 10%;
   right: 5%;
-  border-right: solid 3px;
   padding-right: 3rem;
-  @include g.heading(h1);
+  border-right: solid 3px;
   filter: drop-shadow(map-get(g.$logo-colors, 'blue') 0 0 1rem);
+
+  h1 {
+    @include g.heading(h1);
+  }
+
+  span.light {
+    font-weight: 200;
+  }
 }

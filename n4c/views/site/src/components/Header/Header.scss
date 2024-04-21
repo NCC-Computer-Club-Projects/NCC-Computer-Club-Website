@@ -9,7 +9,6 @@
 
   h1 {
     @include g.heading(h1);
-    font-weight: 500;
   }
 
   .nav-link {
