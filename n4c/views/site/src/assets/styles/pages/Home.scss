@@ -5,14 +5,35 @@
   background-image: linear-gradient(40deg, hsl(238, 98%, 60%), hsla(236, 40%, 85%, 0.2) 18%, hsla(238, 100%, 75%, 0.72)), url('@images/fun-at-primantis.jpg');
   background-blend-mode: multiply;
   background-position-x: center;
-  background-position-y: 40%;
+  background-position-y: 62%;
   background-size: cover;
   isolation: isolate;
   color: map-get($map: g.$logo-colors, $key: 'white');
+
+  .custom-shape-divider-bottom-1713741397 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1713741397 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 123px;
+  }
+
+  .custom-shape-divider-bottom-1713741397 .shape-fill {
+    fill: #FFFFFF;
+  }
 }
 
 .event-time {
-  top: 10%;
+  top: 7%;
   right: 5%;
   padding-right: 3rem;
   border-right: solid 3px;
