@@ -51,7 +51,7 @@ export default function Header() {
   }
 
   return (
-    <header id="Header">
+    <header className="header">
       <nav className="navbar navbar-expand-md mx-3">
         <div className="container-fluid justify-content-around align-items-md-stretch">
           <Link 
