@@ -1,18 +1,22 @@
-@use '@styles/global-styles.scss' as global;
+@use '@styles/global-styles.scss' as g;
 
 #Header {
   $header-bg: linear-gradient(90deg, #67B4F0, #3B688A);
   $header-font-size: 5.25rem;
   
   background-image: $header-bg;
-  
+
+  h1, a:not(.active) {
+    color: map-get(g.$logo-colors, 'white');
+  }
+
   h1 {
     font-size: $header-font-size;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .nav-link {
     font-size: calc($header-font-size * 0.6);
-    font-weight: 400;
+    font-weight: 300;
   }
 }
