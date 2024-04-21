@@ -1,6 +1,6 @@
 @use '@styles/global-styles.scss' as g;
 
-#Header {
+.header {
   $header-bg: linear-gradient(90deg, #67B4F0, #3B688A);
   $header-font-size: 5.25rem;
   
