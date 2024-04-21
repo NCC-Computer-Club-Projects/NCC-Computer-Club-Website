@@ -1,7 +1,7 @@
 @use '@styles/global-styles.scss' as g;
 
 .banner {
-  top: 68%;
+  top: 65%;
   left: 3%;
   width: 35%;
   min-height: fit-content;
@@ -20,7 +20,9 @@
   }
 
   p {
-    @extend %large-text;
+    font-family: 'Yaldevi';
+    font-weight: 200;
+    font-size: 2rem;
   }
 
   .action {
@@ -38,8 +40,8 @@
         margin-right: 3rem;
       }
       
-      h3 {
-        @include g.heading(h3);
+      h4 {
+        @include g.heading(h4);
       }
     }
   }

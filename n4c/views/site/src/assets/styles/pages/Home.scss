@@ -26,3 +26,31 @@
     font-weight: 200;
   }
 }
+
+.mission {
+  justify-content: space-between;
+  height: 80rem;
+  padding: 6%;
+
+  & > * {
+    display: inline-block;
+  }
+
+  .mission-text {
+    width: 50%;
+
+    h3 {
+      @include g.heading('h3', 2, 1, true);
+      margin-bottom: 5rem;
+    }
+
+    p {
+      @extend %large-text;
+    }
+  }
+
+  .mission-img {
+    width: 37%;
+    box-shadow: 0px 4px 19.6px 14px rgba(39, 42, 63, 0.75);
+  }
+}

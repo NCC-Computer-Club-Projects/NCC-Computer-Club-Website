@@ -19,33 +19,34 @@ $enable-shadows: true;
 
 // colors
 $logo-colors: (
-  "blue": #0454b3ff,
-  "baby-blue": #bfdbfeff,
+  "blue": hsl(213, 96%, 36%),
+  "baby-blue": hsl(213, 97%, 87%),
   "gray": #2f2f2fff,
   "white": #ffffffff,
   "dark-blue": #044392ff
 );
 
 $blues: (
-  "blue-100": map-get($logo-colors, "baby-blue"),
+  "blue-200": map-get($logo-colors, "baby-blue"),
+  "blue-300": hsl(241, 100%, 90%),
+  "blue-400": hsl(201, 100%, 21%),
   "blue-500": map-get($logo-colors, "blue"),
-  "blue-900": map-get($logo-colors, "dark-blue")
+  "blue-600": map-get($logo-colors, "dark-blue"),
+  "blue-700": hsl(241, 100%, 26%),
 );
 
 // theme colors
 $primary: map-get($blues, "blue-500");
-$secondary: map-get($blues, "blue-100");
+$secondary: map-get($blues, "blue-200");
 
 // component colors
 $text: map-get($logo-colors, "white");
 $footer: #CDCCFF;
-$active-link: hsl(201, 100%, 21%);
-$para: #030086;
 $bg: #EAEDFE;
 $footer-bg: #272A3F;
 
 // links
-$navbar-light-active-color: $active-link;
+$navbar-light-active-color: map-get($map: $blues, $key: 'blue-400');
 
 // spacing
 $spacer: 2rem;
@@ -61,45 +62,44 @@ $spacer: 2rem;
   src: url('@fonts/Yaldevi/Yaldevi-VariableFont_wght.ttf');
 }
 
-$header-base-size: 5.25rem;
-$header-sizes: (
-  'h1':  $header-base-size,
-  'h2': $header-base-size * 0.6,
-  'h3': $header-base-size * 0.5,
+$heading-base-size: 5.25rem;
+$heading-sizes: (
+  'h1':  $heading-base-size,
+  'h2': $heading-base-size * 0.8,
+  'h3': $heading-base-size * 0.6,
+  'h4': $heading-base-size * 0.5,
 );
 
-$header-weights: (
+$heading-weights: (
   'h1':  500,
   'h2': 350,
-  'h3': 300, 
+  'h3': 200,
+  'h4': 220,  
 );
 
-@mixin heading($h: h1, $gradient: false) {
-  font-size: map-get($header-sizes, #{$h});
-  font-weight: map-get($header-weights, #{$h});
+$heading-fonts: 'Yanone Kaffeesatz', 'Yaldevi';
+
+@mixin heading($h: h1, $scale: 1, $weight: 1, $gradient: false) {
+  font-size: map-get($heading-sizes, #{$h}) * $scale;
+  font-weight: map-get($heading-weights, #{$h}) * $weight;
 
   @if $gradient { 
     background-image: linear-gradient(90deg, #2689FF, #1A60B2);
     background-clip: text;
     color: transparent;
   }
-}
 
-$p-base-size: 1rem;
-$p-sizes: (
-  'large': $p-base-size * 2,
-);
-
-%page-link {
-  font-family: 'Yanone Kaffeesatz';
-  font-weight: 250;
-  font-size: map-get($header-sizes, 'h2');
+  @if $h != 'h4' {
+    font-family: nth($heading-fonts, 1);
+  } @else {
+    font-family: nth($heading-fonts, 2);
+  }
 }
 
 %large-text {
   font-family: 'Yaldevi';
-  font-weight: 200;
-  font-size: map-get($p-sizes, 'large');
+  font-size: 2em;
+  color: map-get($blues, 'blue-700');
 }
 
 // import bootstrap
@@ -130,12 +130,12 @@ img, svg, video {
 }
 
 a:link {
-  color: #CDCCFF;
+  color: hsl(241, 100%, 90%);
   text-decoration: none;
 }
 
 a:visited {
-  color: $para;
+  color: map-get($map: $blues, $key: 'blue-400');
 }
 
 a:hover {
@@ -143,5 +143,5 @@ a:hover {
 }
 
 a:active {
-  color: map-get($map: $logo-colors, $key: 'blue');
+  color: map-get($map: $blues, $key: 'blue-500');
 }
