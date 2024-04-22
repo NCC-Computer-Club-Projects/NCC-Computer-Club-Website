@@ -1,0 +1,26 @@
+@use '@styles/global-styles.scss' as g;
+
+.works-card {
+  width: 25.1%;
+  box-shadow: 2px 4px 20.7px 9px rgba(0, 0, 0, 0.25);
+  border-top-right-radius: 3rem;
+  padding: 2%;
+  background-color: map-get($map: g.$blues, $key: 'blue-400');
+  color: map-get($map: g.$logo-colors, $key: 'white');
+  transition: all 0.2s linear;
+
+  &:hover {
+    animation: bounce;
+    animation-duration: 0.75s;
+    scale: 1.05;
+  }
+
+  h4 {
+    @include g.heading('h4', $weight: 2.5);
+    margin-bottom: 10%;
+  }
+
+  p {
+    @extend %regular-text;
+  }
+}

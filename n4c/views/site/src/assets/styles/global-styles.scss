@@ -29,10 +29,11 @@ $logo-colors: (
 $blues: (
   "blue-200": map-get($logo-colors, "baby-blue"),
   "blue-300": hsl(241, 100%, 90%),
-  "blue-400": hsl(201, 100%, 21%),
+  "blue-400": hsl(206, 73%, 45%),
   "blue-500": map-get($logo-colors, "blue"),
   "blue-600": map-get($logo-colors, "dark-blue"),
   "blue-700": hsl(241, 100%, 26%),
+  "blue-800": hsl(201, 100%, 21%),
 );
 
 // theme colors
@@ -40,20 +41,19 @@ $primary: map-get($blues, "blue-500");
 $secondary: map-get($blues, "blue-200");
 
 // component colors
-$text: map-get($logo-colors, "white");
 $footer: #CDCCFF;
 $bg: #EAEDFE;
 $footer-bg: #272A3F;
 
 // links
-$navbar-light-active-color: map-get($map: $blues, $key: 'blue-400');
+$navbar-light-active-color: map-get($map: $blues, $key: 'blue-800');
 
 // spacing
 $spacer: 2rem;
 
 // font rules
 @font-face {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: 'Yanone';
   src: url('@fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf');
 }
 
@@ -77,8 +77,6 @@ $heading-weights: (
   'h4': 220,  
 );
 
-$heading-fonts: 'Yanone Kaffeesatz', 'Yaldevi';
-
 @mixin heading($h: h1, $scale: 1, $weight: 1, $gradient: false) {
   font-size: map-get($heading-sizes, #{$h}) * $scale;
   font-weight: map-get($heading-weights, #{$h}) * $weight;
@@ -90,9 +88,9 @@ $heading-fonts: 'Yanone Kaffeesatz', 'Yaldevi';
   }
 
   @if $h != 'h4' {
-    font-family: nth($heading-fonts, 1);
+    font-family: 'Yanone';
   } @else {
-    font-family: nth($heading-fonts, 2);
+    font-family: 'Yaldevi';
   }
 }
 
@@ -100,6 +98,12 @@ $heading-fonts: 'Yanone Kaffeesatz', 'Yaldevi';
   font-family: 'Yaldevi';
   font-size: 2em;
   color: map-get($blues, 'blue-700');
+}
+
+%regular-text {
+  font-family: 'Yaldevi';
+  font-size: 1em;
+  font-weight: 100;
 }
 
 // import bootstrap
@@ -119,7 +123,7 @@ html {
 body {
   min-height: 100vh;
   font-size: 1.6rem;
-  font-family: 'Yanone Kaffeesatz', system-ui;
+  font-family: 'Yanone', system-ui;
 }
 
 img, svg, video {
@@ -135,7 +139,7 @@ a:link {
 }
 
 a:visited {
-  color: map-get($map: $blues, $key: 'blue-400');
+  color: map-get($map: $blues, $key: 'blue-800');
 }
 
 a:hover {

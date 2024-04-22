@@ -13,6 +13,6 @@
 
   .nav-link {
     @include g.heading('h3', 1.2);
-    font-family: nth(g.$heading-fonts, 1);
+    font-family: 'Yanone';
   }
 }

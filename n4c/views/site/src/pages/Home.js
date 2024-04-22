@@ -2,8 +2,27 @@ import React from 'react';
 import '@styles/pages/Home.scss';
 import Banner from '../components/Banner/Banner';
 import missionImg from '@images/mock-images/mission.jpg'
+import WorksCard from '../components/WorksCard/WorksCard';
 
 export default function Home() {
+  const cardData = [
+    {
+      title: 'GitHub',
+      text: 'Take a look at some of our GitHub projects.' 
+    },{
+      title: 'Cyber Range',
+      text: 'Practice securing vulnerabilities on our cyber range.' 
+    },{
+      title: 'Workshops',
+      text: 'Aquire new skills at our weekly workshops.' 
+    },{
+      title: 'PC Repair',
+      text: 'Laptop in need of a fix? Visit the PC Repair Clinic!' 
+    },
+  ];
+
+  const worksCards = cardData.map(card => <WorksCard title={card.title} text={card.text} />);
+
   return (
     <div id='Home'>
       <section className='hero container-fluid position-relative p-0'>
@@ -31,13 +50,22 @@ export default function Home() {
           </svg>
         </div>
       </section>
-      <section className='mission d-flex flex-row'>
-        <div className='mission-text'>
-          <h3>Our Mission</h3>
-          <p>Students of Northampton's computer and information technology sector learn many skills in their studies, but putting those knowledge into practice can be a challenge. Our members posses the potential to create something big for themselves and the community using not only what they learn here at Northampton, but also the skills they acquire through their own research and hard work, Northampton Community College Computer Club– or N4C–  gives students a chance to put their learning into practice!</p>
-        </div>
-        <img className='mission-img rounded-circle' src={missionImg}/>
-      </section>
+      <main>
+        <section className='mission d-flex flex-row'>
+          <div className='mission-text'>
+            <h3>Our Mission</h3>
+            <p>Students of Northampton's computer and information technology sector learn many skills in their studies, but putting those knowledge into practice can be a challenge. Our members posses the potential to create something big for themselves and the community using not only what they learn here at Northampton, but also the skills they acquire through their own research and hard work, Northampton Community College Computer Club– or N4C–  gives students a chance to put their learning into practice!</p>
+          </div>
+          <img className='mission-img rounded-circle' src={missionImg}/>
+        </section>
+        <section className='works'>
+          <h3>See What We're Working On!</h3>
+          <div className='card-display d-flex flex-wrap flex-row'>
+            {worksCards}
+          </div>
+        </section>
+        <section className='advisor'></section>
+      </main>
     </div>
   );
 }
