@@ -1,0 +1,37 @@
+@use '@styles/global-styles.scss' as g;
+
+.footer {
+  height: 30rem;
+  padding: 1% 0.2%;
+  background-color: #272A3F;
+  color: map-get($map: g.$logo-colors, $key: 'white');
+
+  .footer-top {
+    height: 80%;
+
+    .logo-space {
+      flex: 0 1 10%;
+      max-height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 8%;
+
+      .logo-space-logo {
+        height: 13rem;
+        max-height: 60%;
+      }
+
+      .location {
+        display: flex;
+        flex-flow: row nowrap;
+        padding-left: 10px;
+        gap: 5px;
+      }
+    }
+  }
+
+  .footer-bottom {
+
+  }
+}

@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LayoutContext } from '../../contexts';
 import KeyList from '../../../../../assets/scripts/view-utils/key-list';
-import brand from '@super-assets/images/logo/n4c-logo.svg';
+import logo from '@super-assets/images/logo/n4c-logo.svg';
 import PageLink from '../PageLink/PageLink';
 
 export default function Header() {
@@ -59,7 +59,7 @@ export default function Header() {
             to="/" 
             onClick={() => selectLink('home')} 
           >
-            <img src={brand} height={80} className="rounded-circle"/>
+            <img src={logo} height={80} className="rounded-circle"/>
             <h1 className='m-0'>N4C</h1>
           </Link>
           <button 
