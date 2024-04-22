@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LayoutContext } from '../../contexts';
 import KeyList from '../../../../../assets/scripts/view-utils/key-list';
-import brand from '../../../../../assets/images/logo/n4c-logo.svg';
+import brand from '@super-assets/images/logo/n4c-logo.svg';
 import PageLink from '../PageLink/PageLink';
 
 export default function Header() {
