@@ -1,4 +1,4 @@
-![n4c Logo](site/assets/images/logo/n4c-logo.svg)
+![n4c Logo](n4c/views/site/src/assets/images/logos/n4c/n4c-logo.svg)
 
 # NCC Computer Club Website 
 Hello and welcome to the **Northampton Computer Club website repository**! The NCC Computer Club Website repository is the perfect training ground for students of *computer science*, *web development/design*, *infosec*, *CIS*, *networking systems technology*, *application development*, and *system administration* who want to build something real for themselves and the community. 

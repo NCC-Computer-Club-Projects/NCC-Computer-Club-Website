@@ -1,4 +1,4 @@
-![n4c Logo](./assets/images/logo/n4c-logo.svg)
+![n4c Logo](src/assets/images/logos/n4c/n4c-logo.svg)
 
 # Main Site
 
