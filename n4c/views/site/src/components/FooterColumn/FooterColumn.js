@@ -6,17 +6,15 @@ export default function FooterColumn({title, links}) {
 
   const formattedLinks = links.map(link => (
     <li className='footer-link' key={link.text}>
-      <a href={link.destination}>
-        {link.icon && <img src={iconContext(link.icon)} />} 
-        {link.text}
-      </a>
+      {link.icon && <img className='footer-icon' src={iconContext(link.icon)} />} 
+      <a href={link.destination}>{link.text}</a>
     </li>
   ));
 
   return (
     <div className='footer-column'>
-      <h5>{title}</h5>
-      <ul>{formattedLinks}</ul>
+      <h5 className='footer-title'>{title}</h5>
+      <ul className='footer-content'>{formattedLinks}</ul>
     </div>
   );
 }

@@ -88,7 +88,7 @@ main {
   section.works {
     padding-top: 10rem;
     padding-bottom: 10rem;
-    background-color: #EAEDFE;
+    background-color: map-get($map: g.$logo-colors, $key: 'white');
     text-align: center;
 
     .card-display {

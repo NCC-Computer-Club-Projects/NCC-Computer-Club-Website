@@ -22,7 +22,7 @@ $logo-colors: (
   "blue": hsl(213, 96%, 36%),
   "baby-blue": hsl(213, 97%, 87%),
   "gray": #2f2f2fff,
-  "white": #ffffffff,
+  "white": hsl(231, 91%, 96%),
   "dark-blue": #044392ff
 );
 
@@ -39,10 +39,6 @@ $blues: (
 // theme colors
 $primary: map-get($blues, "blue-500");
 $secondary: map-get($blues, "blue-200");
-
-// component colors
-$footer: #CDCCFF;
-$bg: #EAEDFE;
 
 // links
 $navbar-light-active-color: map-get($map: $blues, $key: 'blue-800');
@@ -133,12 +129,12 @@ img, svg, video {
 }
 
 a:link {
-  color: hsl(241, 100%, 90%);
+  color: map-get($map: $blues, $key: 'blue-300');
   text-decoration: none;
 }
 
 a:visited {
-  color: map-get($map: $blues, $key: 'blue-800');
+  color: map-get($map: $blues, $key: 'blue-300');
 }
 
 a:hover {

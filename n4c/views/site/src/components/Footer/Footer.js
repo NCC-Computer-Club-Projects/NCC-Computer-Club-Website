@@ -12,7 +12,7 @@ export default function Footer() {
       links: [
         {
           text: 'Email list',
-          icon: './email.svg',
+          icon: '',
           destination: '#'
         },{
           text: 'Sign Up',
@@ -52,8 +52,8 @@ export default function Footer() {
   const columns = columnData.map(data => <FooterColumn key={data.title} title={data.title} links={data.links}/>);
 
   return (
-    <footer className="footer">
-      <div className='footer-top d-flex flex-row'>
+    <footer className='footer'>
+      <div className='footer-top'>
         <div className='logo-space'>
           <img src={logo} className='logo-space-logo rounded-circle'/>
           <div className='location'>
@@ -67,9 +67,14 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        {columns}
+        <div className='footer-columns'>
+          {columns}
+        </div>
       </div>
-      <div className='footer-bottom d-flex flex-row justify-content-between'></div>
+      <div className='footer-bottom'>
+        <p>Copyright Northampton Community College ©2010-2024.</p>
+        <a href='*'>Terms</a>
+      </div>
     </footer>
   );
 }
