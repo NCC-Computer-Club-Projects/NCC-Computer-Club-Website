@@ -43,10 +43,16 @@ $footer-gap: 8px;
 
     .logo-space {
       @extend %column;
+      gap: 2.5rem;
       
       .logo-space-logo {
-        height: 8rem;
-        align-self: center;
+        height: 7.5rem;
+        gap: 1rem;
+
+        h1 {
+          @include g.heading(h2);
+          padding-top: 1rem;
+        }
       }
 
       .location {
