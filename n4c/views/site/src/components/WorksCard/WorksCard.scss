@@ -1,12 +1,13 @@
-@use '@styles/global-styles.scss' as g;
+@use '@styles/_text.scss';
+@use '@styles/_theme.scss';
 
 .works-card {
   width: 25.1%;
-  box-shadow: 2px 4px 20.7px 9px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 20.7px 9px hsla(0, 0%, 0%, 0.25);
   border-top-right-radius: 3rem;
   padding: 2%;
-  background-color: map-get($map: g.$blues, $key: 'blue-400');
-  color: map-get($map: g.$logo-colors, $key: 'white');
+  background-color: map-get(theme.$blues, 'blue-400');
+  color: map-get(theme.$logo-colors, 'white');
   transition: all 0.2s linear;
 
   &:hover {
@@ -16,7 +17,7 @@
   }
 
   h4 {
-    @include g.heading('h4', $weight: 2.5);
+   @include text.heading('h4', $weight: 2.5);
     margin-bottom: 10%;
   }
 

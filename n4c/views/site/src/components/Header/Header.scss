@@ -1,18 +1,19 @@
-@use '@styles/global-styles.scss' as g;
+@use '@styles/_text.scss';
+@use '@styles/_theme.scss';
 
 .header {
-  background-image: linear-gradient(90deg, #67B4F0, #3B688A);;
+  background-image: linear-gradient(90deg, hsl(206, 82%, 67%), hsl(206, 40%, 39%));;
 
   h1, a:not(.active) {
-    color: map-get(g.$logo-colors, 'white');
+    color: map-get(theme.$logo-colors, 'white');
   }
 
   h1 {
-    @include g.heading(h1);
+    @include text.heading(h1);
   }
 
   .nav-link {
-    @include g.heading('h3', 1.2);
+    @include text.heading('h3', 1.2);
     font-family: 'Yanone';
   }
 }

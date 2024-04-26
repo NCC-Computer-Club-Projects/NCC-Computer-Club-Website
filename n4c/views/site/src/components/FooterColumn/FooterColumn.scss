@@ -1,4 +1,4 @@
-@use '../Footer/Footer.scss' as footer;
+@use '../Footer/Footer' as footer;
 
 .footer-column {
   @extend %column;

@@ -1,4 +1,5 @@
-@use '@styles/global-styles.scss' as g;
+@use '@styles/_theme.scss';
+@use '@styles/_text.scss';
 
 .banner {
   top: 53%;
@@ -12,10 +13,10 @@
   padding: 3rem 3rem 1rem;
   background-color: hsl(0, 2%, 10%, 0.3);
   backdrop-filter: blur(4px);
-  color: map-get(g.$logo-colors, 'white');
+  color: map-get(theme.$logo-colors, 'white');
 
   h1 {
-    @include g.heading(h1);
+    @include text.heading(h1);
     margin-bottom: 3rem;
   }
 
@@ -41,7 +42,7 @@
       }
       
       h4 {
-        @include g.heading(h4);
+        @include text.heading(h4);
       }
     }
   }

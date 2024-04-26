@@ -17,89 +17,10 @@ Style Rule Order:
 $prefix: "mb-";
 $enable-shadows: true;
 
-// colors
-$logo-colors: (
-  "blue": hsl(213, 96%, 36%),
-  "baby-blue": hsl(213, 97%, 87%),
-  "gray": #2f2f2fff,
-  "white": hsl(231, 91%, 96%),
-  "dark-blue": #044392ff
-);
-
-$blues: (
-  "blue-200": map-get($logo-colors, "baby-blue"),
-  "blue-300": hsl(241, 100%, 90%),
-  "blue-400": hsl(206, 73%, 45%),
-  "blue-500": map-get($logo-colors, "blue"),
-  "blue-600": map-get($logo-colors, "dark-blue"),
-  "blue-700": hsl(241, 100%, 26%),
-  "blue-800": hsl(201, 100%, 21%),
-);
-
-// theme colors
-$primary: map-get($blues, "blue-500");
-$secondary: map-get($blues, "blue-200");
-
-// links
-$navbar-light-active-color: map-get($map: $blues, $key: 'blue-800');
-
 // spacing
 $spacer: 2rem;
 
-// font rules
-@font-face {
-  font-family: 'Yanone';
-  src: url('@fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'Yaldevi';
-  src: url('@fonts/Yaldevi/Yaldevi-VariableFont_wght.ttf');
-}
-
-$heading-base-size: 5.25rem;
-$heading-sizes: (
-  'h1':  $heading-base-size,
-  'h2': $heading-base-size * 0.8,
-  'h3': $heading-base-size * 0.6,
-  'h4': $heading-base-size * 0.5,
-);
-
-$heading-weights: (
-  'h1':  500,
-  'h2': 350,
-  'h3': 200,
-  'h4': 220,  
-);
-
-@mixin heading($h: h1, $scale: 1, $weight: 1, $gradient: false) {
-  font-size: map-get($heading-sizes, #{$h}) * $scale;
-  font-weight: map-get($heading-weights, #{$h}) * $weight;
-
-  @if $gradient { 
-    background-image: linear-gradient(90deg, #2689FF, #1A60B2);
-    background-clip: text;
-    color: transparent;
-  }
-
-  @if $h != 'h4' {
-    font-family: 'Yanone';
-  } @else {
-    font-family: 'Yaldevi';
-  }
-}
-
-%large-text {
-  font-family: 'Yaldevi';
-  font-size: 2em;
-  color: map-get($blues, 'blue-700');
-}
-
-%regular-text {
-  font-family: 'Yaldevi';
-  font-size: 1em;
-  font-weight: 100;
-}
+@use 'theme';
 
 // import bootstrap
 @import "bootstrap/scss/bootstrap";
@@ -129,18 +50,18 @@ img, svg, video {
 }
 
 a:link {
-  color: map-get($map: $blues, $key: 'blue-300');
+  color: map-get(theme.$blues, 'blue-300');
   text-decoration: none;
 }
 
 a:visited {
-  color: map-get($map: $blues, $key: 'blue-300');
+  color: map-get(theme.$blues, 'blue-300');
 }
 
 a:hover {
-  text-shadow: map-get($logo-colors, 'white') 0 0 1rem;
+  text-shadow: map-get(theme.$logo-colors, 'white') 0 0 1rem;
 }
 
 a:active {
-  color: map-get($map: $blues, $key: 'blue-500');
+  color: map-get(theme.$blues, 'blue-500');
 }
