@@ -51,12 +51,14 @@ export default function Home() {
         </div>
       </section>
       <main>
-        <section className='mission d-flex flex-row'>
-          <div className='mission-text'>
-            <h3>Our Mission</h3>
-            <p>Students of Northampton's computer and information technology sector learn many skills in their studies, but putting those knowledge into practice can be a challenge. Our members posses the potential to create something big for themselves and the community using not only what they learn here at Northampton, but also the skills they acquire through their own research and hard work, Northampton Community College Computer Club- or N4C-  gives students a chance to put their learning into practice!</p>
+        <section className='mission'>
+          <h3>Our Mission</h3>
+          <div className='mission-content'>
+            <p>
+              <img className='mission-img rounded-circle' src={missionImg}/>
+              Students of Northampton's computer and information technology sector learn many skills in their studies, but putting those knowledge into practice can be a challenge. Our members posses the potential to create something big for themselves and the community using not only what they learn here at Northampton, but also the skills they acquire through their own research and hard work, Northampton Community College Computer Club- or N4C-  gives students a chance to put their learning into practice!
+            </p>
           </div>
-          <img className='mission-img rounded-circle' src={missionImg}/>
         </section>
         <section className='works'>
           <h3>See What We're Working On!</h3>

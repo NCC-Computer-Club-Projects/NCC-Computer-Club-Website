@@ -21,6 +21,7 @@ $enable-shadows: true;
 $spacer: 2rem;
 
 @use 'theme';
+@use 'text';
 
 // import bootstrap
 @import "bootstrap/scss/bootstrap";
@@ -64,4 +65,9 @@ a:hover {
 
 a:active {
   color: map-get(theme.$blues, 'blue-500');
+}
+
+h3 {
+  @include text.heading('h3', 2, 1, true);
+  margin-bottom: 5rem;
 }
