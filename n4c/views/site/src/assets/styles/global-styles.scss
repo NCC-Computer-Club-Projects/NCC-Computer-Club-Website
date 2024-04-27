@@ -13,6 +13,9 @@ Style Rule Order:
 11. other
 */
 
+@use 'theme';
+@use 'text';
+
 // Custom scss
 $prefix: "mb-";
 $enable-shadows: true;
@@ -20,8 +23,12 @@ $enable-shadows: true;
 // spacing
 $spacer: 2rem;
 
-@use 'theme';
-@use 'text';
+// color overrides
+$primary: map-get(theme.$blues, "blue-500");
+$secondary: map-get(theme.$blues, "blue-200");
+
+// links
+$navbar-light-active-color: map-get(theme.$blues, 'blue-800');
 
 // import bootstrap
 @import "bootstrap/scss/bootstrap";

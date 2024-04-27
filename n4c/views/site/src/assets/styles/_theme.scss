@@ -15,10 +15,3 @@ $blues: (
   "blue-700": hsl(241, 100%, 26%),
   "blue-800": hsl(201, 100%, 21%),
 );
-
-// theme colors
-$primary: map-get($blues, "blue-500");
-$secondary: map-get($blues, "blue-200");
-
-// links
-$navbar-light-active-color: map-get($blues, 'blue-800');
