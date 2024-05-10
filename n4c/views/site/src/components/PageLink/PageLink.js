@@ -1,15 +1,16 @@
 import './PageLink.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import upperCaseAll from '@super-assets/scripts/view-utils/uppercase-all.js';
 
 export default function PageLink({pageName, isActive, handleClick}) {
   const link = isActive ? (
     <Link to={pageName === 'home' ? '/' : pageName} className="nav-link active" aria-current="page">
-      {/pcrepair/i.test(pageName) ? 'PcRepair' : pageName.replace(/^\w/, pageName[0].toUpperCase())}
+      {upperCaseAll(pageName)}
     </Link>
   ) : (
     <Link to={pageName === 'home' ? '/' : pageName} className="nav-link">
-      {/pcrepair/i.test(pageName) ? 'PcRepair' :  pageName.replace(/^\w/, pageName[0].toUpperCase())}
+      {upperCaseAll(pageName)}
     </Link>
   );
 

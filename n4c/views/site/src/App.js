@@ -14,8 +14,7 @@ export default function App() {
   pages.unshift(homePage);
 
   // filter page navs in layout header
-  const pageNavList = pages.map(pageName => pageName.toLowerCase())
-    .filter(pageName => !/(error(404)?|index|contact)/i.test(pageName));
+  const pageNavList = pages.filter(pageName => !/(error(404)?|index|contact)/i.test(pageName));
 
   // create routes from PAGES modules
   const pagesArr = Object.values(PAGES); // array of page modules

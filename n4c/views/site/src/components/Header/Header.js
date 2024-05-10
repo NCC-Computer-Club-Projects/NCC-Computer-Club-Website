@@ -12,7 +12,6 @@ export default function Header() {
     const pageMap = {};
 
     for (const link of pages) pageMap[link] = false;
-
     return pageMap;
   });
 
