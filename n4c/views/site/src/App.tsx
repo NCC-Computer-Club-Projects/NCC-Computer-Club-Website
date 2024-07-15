@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import Layout from './components/Layout/Layout';
-import KeyList from '../../../assets/scripts/view-utils/key-list';
+import KeyList from './assets/scripts/utils/key-list';
 import * as PAGES from './pages';
 
 export default function App() {

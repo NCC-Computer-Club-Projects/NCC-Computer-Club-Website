@@ -2,7 +2,7 @@ import './Header.scss';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LayoutContext } from '../../contexts';
-import KeyList from '../../../../../assets/scripts/view-utils/key-list';
+import KeyList from '../../assets/scripts/utils/key-list';
 import logo from '@images/logos/n4c/n4c-logo.svg';
 import PageLink from '../PageLink/PageLink';
 

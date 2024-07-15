@@ -1,7 +1,7 @@
 import './PageLink.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import upperCaseAll from '@super-assets/scripts/view-utils/uppercase-all.js';
+import upperCaseAll from '@scripts/utils/uppercase-all.js';
 
 export default function PageLink({pageName, isActive, handleClick}) {
   const link = isActive ? (
