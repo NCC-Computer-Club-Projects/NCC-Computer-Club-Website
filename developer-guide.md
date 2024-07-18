@@ -64,6 +64,7 @@ Developers are encouraged to learn the following languages, libraries, and frame
 The following concepts may not be integral to application development, but will certainly aid in your development journey:
 
   - Other Command Line Interfaces (CLIs), E.g: Command Prompt / PowerShell
+  - Visual Studio, Visual Studio Code, and console debuggers
   - Variable naming conventions for each language
   - Figma and interface design tools
   - SVG and XML
