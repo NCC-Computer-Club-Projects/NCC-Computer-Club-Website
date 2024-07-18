@@ -93,4 +93,4 @@ sudo npm run compile-prod
 sudo npm start
 ```
 
-As with the development steps, the first command brings you to the app directory, and the second will rebuild the app. The last two commands are where the two environments differ: `sudo npm run compile-prod` will use a different compilation set up from the `compile-prod` used under the hood for `npm run dev`. Most importantly, the production command will instruct the [server.js](./n4c/server.js) file to use the `.env` file for server config.
+As with the development steps, the first command brings you to the app directory, and the second will rebuild the app. The last two commands are where the two environments differ: `sudo npm run compile-prod` will use a different compilation set up from the `compile-prod` used under-the-hood for `npm run dev`. Most importantly, the production command will instruct the [server.js](./n4c/server.js) file to use the `.env` file for server config.
