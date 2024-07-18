@@ -1,4 +1,4 @@
-# Developer Guidelines
+# Developer Guide
 
 In contrast to the [contribution guide](./contribution-guide.md) These guidelines are more specific to the development process rather than commit standards. Follow these steps for making changes to the website. Note that some CLI commands may require `sudo` prepended to them in order to work. 
 
@@ -43,6 +43,10 @@ Developers are encouraged to learn the following languages, libraries, and frame
 - [Linux](https://www.linux.com/what-is-linux/): An open source operating system. This is the OS shared across the virtual machines developers access when working with the web server.
   * [Terminal](https://ubuntu.com/tutorials/command-line-for-beginners): The Command Line Interface (CLI) for Linux.
   * [RedHat](https://www.redhat.com/en/topics/linux/what-is-linux#why-choose-red-hat): The specific flavor of Linux used for our application.
+
+  ### Other
+
+  - [Git CLI](https://git-scm.com) & [GitHub](https://github.com): Version control system (VCS) for making changes to the repository.
 
 ### Free Websites for Learning
 
