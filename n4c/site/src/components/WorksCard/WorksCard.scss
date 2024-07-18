@@ -1,0 +1,33 @@
+@use '@styles/_text.scss';
+@use '@styles/_theme.scss';
+
+$width: 25.1%; 
+
+.works-card {
+  width: $width;
+  min-width: 10em;
+  max-width: $width;
+  flex: 1 1 auto;
+  box-shadow: 2px 4px 20.7px 9px hsla(0, 0%, 0%, 0.25);
+  border-top-right-radius: 3rem;
+  padding: 2%;
+  background-color: map-get(theme.$blues, 'blue-400');
+  color: map-get(theme.$logo-colors, 'white');
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    animation: bounce;
+    animation-duration: 0.75s;
+    scale: 1.05;
+  }
+
+  h4 {
+   @include text.heading('h4', $weight: 2.5);
+    margin-bottom: 10%;
+  }
+
+  p {
+    @extend %regular-text;
+  }
+}

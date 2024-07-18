@@ -12,6 +12,8 @@ N4C was designed to teach new web and application developers the fundamentals of
 
 React, Bootstrap, Express.js, MySQL, Apache
 
+We are using Node.js v20.12.0 and npm v10.5.0. I recommend installing the Node Version Manager (nvm) to maintain version consistency on both local machines and the web server.
+
 ## What to Know
 
 Developers are encouraged to learn the following languages, libraries, and frameworks to contribute to the project. Each bullet is generally ordered front-to-back: client -> server -> data layer -> operating system (OS). Each nested bullet is also sorted by level of abstraction (library first, then framework). I recommend going in order.
@@ -85,7 +87,7 @@ sudo npm run build
 sudo npm run dev
 ```
 
-The preceding commands will first navigate to the app directory, giving you access to the `npm` commands, then remove all app dependencies and reinstall them in your development space. After all dependencies have been reinstalled, `npm run dev` will compile and start up the app; the terminal will output the app URL. You are now ready to start development.
+The preceding commands will first navigate to the app directory, giving you access to the `npm` commands, then remove all app dependencies and reinstall them in your development space. After all dependencies have been reinstalled, `npm run dev` will compile and start up the app; the terminal will output the app [URL](http://localhost:5670). You are now ready to start development.
 
 ## Setting Up A Production Environment
 

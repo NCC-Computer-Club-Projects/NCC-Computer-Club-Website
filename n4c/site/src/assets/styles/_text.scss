@@ -1,0 +1,63 @@
+@use 'theme';
+@use 'sass:math';
+
+// font rules
+@font-face {
+  font-family: 'Yanone';
+  src: url('@fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Yaldevi';
+  src: url('@fonts/Yaldevi/Yaldevi-VariableFont_wght.ttf');
+}
+
+$heading-base-size: 5.25rem;
+$heading-sizes: (
+  'h1':  $heading-base-size,
+  'h2': $heading-base-size * 0.8,
+  'h3': $heading-base-size * 0.6,
+  'h4': $heading-base-size * 0.5,
+);
+
+$heading-weights: (
+  'h1':  500,
+  'h2': 350,
+  'h3': 200,
+  'h4': 220,  
+);
+
+@mixin heading($h: h1, $scale: 1, $weight: 1, $gradient: false) {
+  font-size: map-get($heading-sizes, #{$h}) * $scale;
+  font-weight: map-get($heading-weights, #{$h}) * $weight;
+
+  @if $gradient { 
+    background-image: linear-gradient(90deg, #2689FF, #1A60B2);
+    background-clip: text;
+    color: transparent;
+  }
+
+  @if $h != 'h4' {
+    font-family: 'Yanone';
+  } @else {
+    font-family: 'Yaldevi';
+  }
+}
+
+%large-text {
+  font-family: 'Yaldevi';
+  font-size: 2em;
+  color: map-get(theme.$blues, 'blue-700');
+
+  @for $i from 0 through 6 {
+    @media (max-width: #{1600px - (400 * $i)}) {
+      font-size: #{1.8em - (0.25 * $i)};
+    }
+  }
+}
+
+%regular-text {
+  font-family: 'Yaldevi';
+  font-size: 1em;
+  font-weight: 100;
+}

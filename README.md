@@ -1,4 +1,4 @@
-![n4c Logo](n4c/views/site/src/assets/images/logos/n4c/n4c-logo.svg)
+![n4c Logo](n4c/site/src/assets/images/logos/n4c/n4c-logo.svg)
 
 # NCC Computer Club Website 
 

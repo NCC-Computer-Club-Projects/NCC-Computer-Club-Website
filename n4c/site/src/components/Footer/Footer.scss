@@ -1,0 +1,72 @@
+@use '@styles/_theme.scss';
+@use '@styles/_text.scss';
+
+$footer-font: 2rem;
+$footer-gap: 8px;
+
+%column {
+  flex: 1 1 25%;
+  flex-flow: column nowrap;
+  align-items: start;
+  gap: 8%;
+  max-height: 100%;
+  max-width: fit-content;
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  height: 30rem;
+  padding: 1.3% 0.2% 10px;
+  background-color: #272A3F;
+  color: map-get(theme.$logo-colors, 'white');
+  font-size: $footer-font;
+
+  .footer-top, .footer-bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 5rem;
+  }
+
+  .footer-top {
+    max-height: 80%;
+    justify-content: space-between;
+    gap: 20%;
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .logo-space {
+      @extend %column;
+      gap: 2.5rem;
+      
+      .logo-space-logo {
+        height: 7.5rem;
+        gap: 1rem;
+
+        h1 {
+          @include text.heading(h2);
+          padding-top: 1rem;
+        }
+      }
+
+      .location {
+        display: flex;
+        flex-flow: row nowrap;
+        padding-left: 10px;
+        gap: $footer-gap;
+      }
+    }
+  }
+
+  .footer-bottom {
+    font-size: 0.75em;
+    color: map-get(theme.$blues, 'blue-300');
+  }
+}

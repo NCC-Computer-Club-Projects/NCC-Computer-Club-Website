@@ -4,7 +4,7 @@ const { platform } = require('process');
 switch (platform) {
   case 'darwin':
   case 'linux':
-    exec("rm -r views/site/dist/*");
+    exec("rm -r site/dist/*");
     break;
   case 'win32':
     exec("del /Q /S views\site\dist\* & FOR /D %d in (views\site\dist\*) DO rd /Q /S %d");

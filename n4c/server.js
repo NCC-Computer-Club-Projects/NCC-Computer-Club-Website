@@ -12,7 +12,7 @@ if (mode === 'development') { // use webpack development middleware
   const webpack = require('webpack');
   const webpackDevMiddleware = require('webpack-dev-middleware');
 
-  const webpackConfig = require('./views/site/webpack.dev.js');
+  const webpackConfig = require('./site/webpack.dev.js');
   const compiler = webpack(webpackConfig);
   const publicPath = webpackConfig.output.publicPath;
   app.use(
