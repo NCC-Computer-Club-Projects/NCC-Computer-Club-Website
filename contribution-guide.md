@@ -4,11 +4,11 @@ These are the general rules for contributing to the project repository. Here you
 
 ## How to Make Changes
 
-For those new to working with a group on GitHub, we have provided a breif overview of the process.
+For those new to working with a group on GitHub, we have provided a brief overview of the process.
 
 ### Fork
 
-In order to make changes to the repository, or otherwise contribute to the project, you first need to fork the repository: 
+To make changes to the repository, or otherwise contribute to the project, you first need to fork the repository: 
 
 1. From the repository page, locate the dashboard at the top of the page. Click on the **Code** tab on the far left.
 
@@ -16,7 +16,7 @@ In order to make changes to the repository, or otherwise contribute to the proje
 
 ### Set up a Development Space
 
-After forking the repository, start setting up your development environment. You can either develop on a local machine or use [GitHub's Codespaces](https://docs.github.com/en/codespaces). We recommend using Visual Studio or Visual Studio Code for local development, as they accomodates several languages, and extensions, and provides tools that make developing with a team easier. Using the same environment accross various machines also prevents the "Well, it works on my machine..." issue common to development. Of course, this also poses the risk of ignoring potential issues that may arise when end users do not have the same or expected set-up.
+After forking the repository, start setting up your development environment. You can either develop on a local machine or use [GitHub's Codespaces](https://docs.github.com/en/codespaces). We recommend using Visual Studio or Visual Studio Code for local development, as they accommodate several languages and extensions and provide tools that make developing with a team easier. Using the same environment across various machines also prevents the "Well, it works on my machine..." issue common to development. Of course, this also poses the risk of ignoring potential issues that may arise when end users do not have the same or expected set-up.
 
 We will assume that a cloned repository is used for the rest of this document. The other potential fix for this issue is containerizing the project using Docker, for which some support has been configured. Project leads, please thoroughly research and read through the [compose](./n4c/compose.yaml) and [Dockerfile](./n4c/Dockerfile)s before resorting to this method, as they have only been configured for the main app files.
 
@@ -24,7 +24,7 @@ We will assume that a cloned repository is used for the rest of this document. T
 
 1. Use `git branch <new-branch>` to create a new branch within your local repository. Use `git branch` to confirm that your branch has been created.
 
-2. Use `git switch <branch>` or `git checkout <branch>` to access and edit your new branch. Alternatively, you can use `git checkout -b <new-branch>` to create a new branch and switch to it simultaneously. Make sure the title of your new branch suits name of your change or new feature. Creating a new branch in your local repository will not affect the branches of the remote repository.
+2. Use `git switch <branch>` or `git checkout <branch>` to access and edit your new branch. Alternatively, you can use `git checkout -b <new-branch>` to create a new branch and switch to it simultaneously. Make sure the title of your new branch suits the name of your change or new feature. Creating a new branch in your local repository will not affect the branches of the remote repository.
 
 ### Implement Your Changes
 
@@ -42,7 +42,7 @@ Use `git commit` to prompt the text editor and enter a commit message that adequ
 
 If an upstream branch has not yet been set:
 
-1. Type `git remote -v` or `git remote --verbose` to display the full urls your local repository's remote branches. If you have not added any outside of the default origin branch (the repository you forked from), you should only see: 
+1. Type `git remote -v` or `git remote --verbose` to display the full URLs your local repository's remote branches. If you have not added any outside of the default origin branch (the repository you forked from), you should only see: 
 
 ```
 origin  https://github.com/USERNAME/NCC_Computer_Club_Website_Fork.git (fetch)
