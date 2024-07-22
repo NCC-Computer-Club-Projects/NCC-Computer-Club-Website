@@ -46,3 +46,6 @@ package-lock.json
 # local configurations
 .env
 *.conf
+
+# distributions
+dist/
