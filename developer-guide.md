@@ -88,7 +88,9 @@ sudo npm run build
 sudo npm run dev
 ```
 
-The preceding commands will first navigate to the app directory, giving you access to the `npm` commands, then remove all app dependencies and reinstall them in your development space. After all dependencies have been reinstalled, `npm run dev` will compile and start up the app; the terminal will output the app [URL](http://localhost:5670). You are now ready to start development.
+The preceding commands will first navigate to the app directory, giving you access to the `npm` commands, then remove all app dependencies and reinstall them in your development space. After all dependencies have been reinstalled, `npm run dev` will compile and start up the app; the terminal will output the app [URL](http://localhost:5670). 
+
+Navigate to the url. Open the browser console to view further developer instructions. You are now ready to start development.
 
 ## Setting Up A Production Environment
 
