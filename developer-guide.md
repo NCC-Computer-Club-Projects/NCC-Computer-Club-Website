@@ -76,7 +76,7 @@ The N4C website can be accessed from SplashTop with permission from the club dir
 
 ### Updating The Repository
 
-From the website Run `sudo git pull` (preferably from the root) to update the repo.
+From the website Run `git pull` (preferably from the root) to update the repo.
 
 ## Setting Up A Dev Environment
 
@@ -84,8 +84,9 @@ When developing on your local machine or using GitHub's Codespaces, first refer 
 
 ```
 cd n4c
-sudo npm run build
-sudo npm run dev
+npm run build
+npm run compile dev
+npm run dev
 ```
 
 The preceding commands will first navigate to the app directory, giving you access to the `npm` commands, then remove all app dependencies and reinstall them in your development space. After all dependencies have been reinstalled, `npm run dev` will compile and start up the app; the terminal will output the app [URL](http://localhost:5670). 
@@ -98,9 +99,9 @@ These steps are important when you want to replicate the finished application on
 
 ```
 cd n4c
-sudo npm run build
-sudo npm run compile-prod
-sudo npm start
+npm run build
+npm run compile prod
+npm start
 ```
 
-As with the development steps, the first command brings you to the app directory, and the second will rebuild the app. The last two commands are where the two environments differ: `sudo npm run compile-prod` will use a different compilation setup from the `compile-prod` used under the hood for `npm run dev`. Most importantly, the production command will instruct the [server.js](./n4c/server.js) file to use the `.env` file for server config.
+As with the development steps, the first command brings you to the app directory, and the second will rebuild the app. The last two commands are where the two environments differ: `npm run compile-prod` will use a different compilation setup from the `compile-prod` used under the hood for `npm run dev`. Most importantly, the production command will instruct the [server.js](./n4c/server.js) file to use the `.env` file for server config.
