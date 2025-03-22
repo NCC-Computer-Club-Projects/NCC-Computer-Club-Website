@@ -16,9 +16,7 @@ if (mode === 'development') { // use webpack development middleware
   const compiler = webpack(webpackConfig);
   const publicPath = webpackConfig.output.publicPath;
   app.use(
-    webpackDevMiddleware(compiler, {
-      publicPath: publicPath,
-    })
+    webpackDevMiddleware(compiler, { publicPath })
   );
 } else if (mode === 'production') dotenv.config();
 
@@ -30,7 +28,18 @@ app.use(express.static(siteRouter.static));
 
 app.use('/', siteRouter.router);
 
-// configure host variables
-const { PROTOCOL: protocol = 'http', HOST: host = 'localhost', PORT: port = 5670 } = process.env;
+// configure server environment variables
+const { PROTOCOL: protocol = 'http', HOST: host = 'localhost' } = process.env;
+let { PORT: port = 5670 } = process.env;
 
-app.listen(port, () => console.log(`App listening on ${protocol}://${host}:${port}\n`));
+const server = app.listen(port, () => console.log(`App listening on ${protocol}://${host}:${port}\n`));
+
+server.on('error', e => {
+  if (e.code === 'EADDRINUSE') {
+    console.error(`Address in use, trying new port ${++port}`);
+    setTimeout(() => {
+      server.close();
+      server.listen(port, host);
+    }, 1000);
+  }
+})

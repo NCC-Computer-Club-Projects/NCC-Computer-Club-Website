@@ -22,7 +22,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, 'src/assets/images/logos/n4c/n4c-logo.svg'), // source image to generate icon from
+      logo: path.resolve(__dirname, '../../n4c/assets/images/logo/mb-logo.svg'), // source image to generate icon from
       inject: true, // inject links/metadata into HtmlWebpackPlugin(s)
       // outputPath: 'assets', // directory to output the assets relative to the webpack output dir.
       prefix: 'assets/images/favicons/', // prefix path for generated assets
@@ -61,7 +61,15 @@ module.exports = {
               }
             }
           },
-          'sass-loader' // compiles sass/scss to css
+          { // compiles sass/scss to css,
+              loader: 'sass-loader',
+              options: {
+                  implementation: require('sass'),
+                  sassOptions: {
+                      sourceMap: true
+                  }
+              }
+          }
         ],
       },
       {
@@ -98,9 +106,9 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.jsx', '.ejs'], // omit file extensions on import statements
   },
   output: {
-    publicPath: path.resolve(__dirname, '/'), // path for static assets
+    publicPath: './', // path for static assets
     filename: 'assets/scripts/[name].[contenthash].bundle.js',
-    assetModuleFilename: (pathData) => {
+    assetModuleFilename: pathData => {
       const ext = pathData.filename.match(/(\.\w+)$/g)[0];
       let path = 'assets/';
 

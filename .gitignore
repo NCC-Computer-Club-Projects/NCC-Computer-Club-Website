@@ -48,4 +48,4 @@ package-lock.json
 *.conf
 
 # distributions
-dist/
+**/dist/
